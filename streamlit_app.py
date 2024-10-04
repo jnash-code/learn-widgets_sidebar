@@ -4,7 +4,7 @@ import pandas as pd
 
 dataframe = pd.DataFrame(
     np.random.randn(5, 4),
-    columns=('col %d' % i for i in range(4)))
+    columns=(f'colmn {i}' for i in range(4)))
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
