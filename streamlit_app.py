@@ -72,13 +72,15 @@ add_selectbox = st.sidebar.selectbox(
     ('Email', 'Home phone', 'Mobile phone')
 )
 
+st.sidebar.write('You selected: ', add_selectbox)
+
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
     'Select a range of values',
     0.0, 100.0, (25.0, 75.0)
 )
 
-
+st.sidebar.write('You selected: ', add_slider)
 
 
 
