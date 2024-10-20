@@ -1,19 +1,20 @@
-# 🎈 Blank app template
+When chainging any input on the page.
 
-A simple Streamlit app template for you to modify!
+The following chunk must be executed.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+```
+v = st.slider(
+    'With default value 25',
+    0.0, 10.0, 4.0
+)
+"v is : ", v
 
-### How to run it on your own machine
+random_arg = np.random.randn(1,1)[0,0]
 
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+w = st.slider(
+    'With default value 25',
+    0.0, 10.0, random_arg
+)
+"w is : ", w
+```
+I can tell because the part `"New default value : ", random_arg` does run.

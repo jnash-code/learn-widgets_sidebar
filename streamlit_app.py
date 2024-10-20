@@ -10,12 +10,21 @@ st.dataframe(dataframe.style.highlight_max(axis=0))
 
 st.write('-----------------------------------------------')
 
-y = st.slider(
-    'With default value 75.0',
-    0.0, 100.0, 25.0
+v = st.slider(
+    'With default value 25',
+    0.0, 10.0, 4.0
 )
-"Point is at : ", y
+"v is : ", v
 
+random_arg = np.random.randn(1,1)[0,0]
+
+w = st.slider(
+    'With default value 25',
+    0.0, 10.0, random_arg
+)
+"w is : ", w
+
+"New default value : ", random_arg
 
 st.write('-----------------------------------------------')
 
@@ -90,7 +99,3 @@ add_slider = st.sidebar.slider(
 )
 
 st.sidebar.write('You selected: ', add_slider)
-
-
-
-
